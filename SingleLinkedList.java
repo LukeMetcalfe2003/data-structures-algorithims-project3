@@ -121,12 +121,6 @@ public class SingleLinkedList {
 		// If we reached here, the node wasn't found
 		System.out.println("Node not found.");
 		return false;
-	}
-	
-
-
-
-
-	
+	}	
 }
 
