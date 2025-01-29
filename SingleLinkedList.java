@@ -78,25 +78,20 @@ public class SingleLinkedList {
 	}
 	
 	public void traverseLinkedList() {
-		// Check if the list is empty
-		if (head == null) {
-			System.out.println("The list is empty.");
-			return;
-		}
-	
-		Node currentNode = head;
-		StringBuilder output = new StringBuilder();
-	
-		// Traverse the list and build the output string
-		while (currentNode != null) {
-			output.append(currentNode.value);
-			if (currentNode.next != null) {
-				output.append(" -> ");
-			}
-			currentNode = currentNode.next;
-		}
-		System.out.println(output.toString());
-	}
+        if (head == null) {
+            System.out.println("SLL does not exist");
+        } else {
+            Node temNode = head;
+            for (int i = 0; i < size; i++) {
+                System.out.print(temNode.value);
+                if (i != size - 1) {
+                    System.out.print(" -> ");
+                }
+                temNode = temNode.next;
+            }
+            System.out.print("\n");
+        }
+    }
 	
 	public boolean searchNode(int nodeValue) {
 		// If the list is empty, we can't search for a node
